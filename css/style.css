@@ -1222,6 +1222,8 @@ body {
 	}
 	#footer .address li {
 		margin-left: 0;
+		height: 24px;
+		line-height: 24px;
 	}
 	#footer .footer_sns {
 		margin-left: 0;

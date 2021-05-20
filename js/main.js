@@ -1,9 +1,17 @@
 $(function(){
-	var topPos=0;
 	var t=0;
 	var n=0;
+	var w;
+	var h;
+	var topPos=0;
 	var firstFlag=false;
 	var timer=0;
+	var pageGap=100;
+	var clickGap=2;
+
+	if(isMobile){
+		$("body").addClass("mobile");
+	}
 
 	$("#gnb li").eq(n).find("a").addClass("on");
 
@@ -24,16 +32,16 @@ $(function(){
 		timer=setTimeout(function(){
 			t=$(window).scrollTop();
 
-			if(t >= $("#header").offset().top && t < $("#business").offset().top){
+			if(t < $("#business").offset().top-pageGap){
 				n=0;
 			}
-			else if(t >= $("#business").offset().top && t < $("#portfolio").offset().top){
+			else if(t < $("#portfolio").offset().top-pageGap){
 				n=1;
 			}
-			else if(t >= $("#portfolio").offset().top && t < $("#service").offset().top){
+			else if(t < $("#service").offset().top-pageGap){
 				n=2;
 			}
-			else if(t >= $("#service").offset().top && t < $("#contact").offset().top){
+			else if(t < $("#contact").offset().top-pageGap){
 				n=3;
 
 				if($(document).height() == $(window).height()+t){
@@ -93,7 +101,7 @@ $(function(){
 			topPos=$("#header").offset().top;
 		}
 		else{
-			topPos=$("section").eq(n-1).offset().top+2;
+			topPos=$("section").eq(n-1).offset().top+clickGap;
 		}
 		$("html").animate({scrollTop:topPos}, 400, function(){
 			$(".mobile").removeClass("active");
@@ -101,10 +109,6 @@ $(function(){
 			$(".dim").removeClass("active");
 		});
 	});
-
-	var w;
-	var h;
-
 	$(window).resize(function(){
 		w=$(window).width();
 

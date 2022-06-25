@@ -1,18 +1,24 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<title>디자인발전소</title>
+<title>project :: One Page Layout</title>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swa">
 <link rel="stylesheet" href="css/style.css">
-<script src="js/jquery-1.10.1.min.js"></script>
-<script src="js/ismobile.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
 <script src="js/main.js"></script>
 </head>
 
 <body>
 <div class="wrapper">
+	<div class="skip_nav">
+		<a href="#business">본문 바로가기</a>
+	</div>
 	<header id="header">
 		<div class="menu_zone">
 			<div class="menu_zone_inner">
@@ -23,7 +29,6 @@
 						<li><a href="#business">BUSINESS</a></li>
 						<li><a href="#portfolio">PORTFOLIO</a></li>
 						<li><a href="#service">SERVICE</a></li>
-						<!-- <li><a href="#awards">IDENTITY</a></li> -->
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
 				</nav>
@@ -35,7 +40,6 @@
 						<li><a href="#business">BUSINESS</a></li>
 						<li><a href="#portfolio">PORTFOLIO</a></li>
 						<li><a href="#service">SERVICE</a></li>
-						<!-- <li><a href="#awards">IDENTITY</a></li> -->
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
 				</nav>
@@ -63,7 +67,7 @@
 			<h2>BUSINESS</h2>
 			<p>고객사의 니즈에 최적화된<br class="br"> 디지털 통합 마케팅 솔루션을 제공합니다.</p>
 		</div>
-		<div class="content">
+		<div class="content clearfix">
 			<ul>
 				<li>
 					<div class="icon"><a href=""><img src="images/icon_business1_1.jpg" alt="consulting icon"></a></div>
@@ -107,7 +111,7 @@
 			<h2>PORTFOLIO</h2>
 			<p>고객사와 하나 된 울림이 만들어 낸<br class="br"> 행복한 성과입니다.</p>
 		</div>
-		<div class="content">
+		<div class="content clearfix">
 			<ul>
 				<li>
 					<a href="">
@@ -186,7 +190,7 @@
 		<div class="service_list">
 			<ul>
 				<li>
-					<div class="photo"><img src="images/service1.jpg" alt="service1"></div>
+					<a href="" class="photo"><img src="images/service1.jpg" alt="service1"></a>
 					<div class="desc">
 						<dl>
 							<dt>웹 페이지 제작</dt>
@@ -198,7 +202,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="photo"><img src="images/service2.jpg" alt="service2"></div>
+					<a href="" class="photo"><img src="images/service2.jpg" alt="service2"></a>
 					<div class="desc">
 						<dl>
 							<dt>그래픽 디자인</dt>
@@ -210,7 +214,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="photo"><img src="images/service3.jpg" alt="service3"></div>
+					<a href="" class="photo"><img src="images/service3.jpg" alt="service3"></a>
 					<div class="desc">
 						<dl>
 							<dt>워드프레스 개발</dt>
@@ -222,7 +226,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="photo"><img src="images/service4.jpg" alt="service4"></div>
+					<a href="" class="photo"><img src="images/service4.jpg" alt="service4"></a>
 					<div class="desc">
 						<dl>
 							<dt>홈페이지 운영</dt>
@@ -236,68 +240,12 @@
 			</ul>
 		</div>
 	</section>
-	<!--
-	<section id="awards">
-		<div class="title">
-			<h2>AWARDS</h2>
-			<p>주요 Award의 다양한 수상 실적을 통해<br class="br"> 전문성과 크리에이티브를 검증받았습니다.</p>
-		</div>
-		<div class="awards_list">
-			<ul>
-				<li>
-					<div class="photo"><img src="images/img_award1.jpg" alt="award01"></div>
-					<div class="desc">
-						<dl>
-							<dt>KB스타뱅킹</dt>
-							<dd>App Award Korea 2018</dd>
-							<dd>기술이노베이션</dd>
-							<dd>대상</dd>
-						</dl>
-					</div>
-				</li>
-				<li>
-					<div class="photo"><img src="images/img_award2.jpg" alt="award02"></div>
-					<div class="desc">
-						<dl>
-							<dt>서울성모병원</dt>
-							<dd>Web Award Korea 2018</dd>
-							<dd>종합의료분야 & 건강/의료분야</dd>
-							<dd>대상</dd>
-						</dl>
-					</div>
-				</li>
-				<li>
-					<div class="photo"><img src="images/img_award3.jpg" alt="award03"></div>
-					<div class="desc">
-						<dl>
-							<dt>어바웃미</dt>
-							<dd>Web Award Korea 2018</dd>
-							<dd>제품브랜드분야</dd>
-							<dd>대상</dd>
-						</dl>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="signature">
-			<ul>
-				<li><a href=""><img src="images/signature1.jpg" alt="signature1"></a></li>
-				<li><a href=""><img src="images/signature2.jpg" alt="signature2"></a></li>
-				<li><a href=""><img src="images/signature3.jpg" alt="signature3"></a></li>
-				<li><a href=""><img src="images/signature4.jpg" alt="signature4"></a></li>
-				<li><a href=""><img src="images/signature5.jpg" alt="signature5"></a></li>
-				<li><a href=""><img src="images/signature6.jpg" alt="signature6"></a></li>
-				<li><a href=""><img src="images/signature7.jpg" alt="signature7"></a></li>
-			</ul>
-		</div>
-	</section>
-	-->
 	<section id="contact">
 		<div class="title">
 			<h2>CONTACT US</h2>
 			<p>다양한 경험과 노하우로 성공을 설계합니다.</p>
 		</div>
-		<div class="form">
+		<div class="form clearfix">
 			<form>
 				<div class="input_wrap">
 					<input type="text" id="name" placeholder="YOUR NAME*" >
@@ -313,12 +261,12 @@
 			</form>
 		</div>
 	</section>
-	<footer id="footer" class="active">
-		<div class="btn_top"><a href=""><i class="fa fa-angle-up"></i></a></div>
+	<footer id="footer" class="clearfix">
+		<a href="" class="btn_top"><i class="fa fa-angle-up"></i></a>
 		<div class="address">
 			<ul>
 				<li>주소 : 경기도 만안구 안양1동 226-14 삼양오피스텔 405호</li>
-				<li>Tel : 010-9075-0614</li>
+				<li>Tel : 010-0000-0000</li>
 				<li>E-mail : designdigit@hanmail.net</li>
 				<li>COPYRIGHTⓒ DESIGNDIGIT ALL RIGHTS RESERVED.</li>
 			</ul>
